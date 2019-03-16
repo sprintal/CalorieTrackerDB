@@ -1,0 +1,154 @@
+Sat Mar 16 15:46:51 AEDT 2019 : Apache Derby Network Server - 10.10.2.0 - (1582446) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+Sat Mar 16 15:46:51 AEDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0169-84d2-f41f-00006f68c86a 
+on database directory /private/var/folders/j3/_ydk09592wx6xtbtjjt4sxv04dbsp8/T/tmp.UxVUirAL/Documents/CalorieTrackerDB/.netbeans-derby/CalorieTrackerDB with class loader sun.misc.Launcher$AppClassLoader@6f94fa3e 
+Loaded from file:/Applications/NetBeans/glassfish-4.1/javadb/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_181-b13
+user.dir=/Applications/NetBeans/glassfish-4.1/javadb
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.14.3
+derby.system.home=/Users/kmen0004/Documents/CalorieTrackerDB/.netbeans-derby
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Sat Mar 16 15:46:54 AEDT 2019:
+Shutting down instance a816c00e-0169-84d2-f41f-00006f68c86a on database directory /private/var/folders/j3/_ydk09592wx6xtbtjjt4sxv04dbsp8/T/tmp.UxVUirAL/Documents/CalorieTrackerDB/.netbeans-derby/CalorieTrackerDB with class loader sun.misc.Launcher$AppClassLoader@6f94fa3e 
+Sat Mar 16 15:46:55 AEDT 2019 Thread[DRDAConnThread_2,5,main] (DATABASE = CalorieTrackerDB), (DRDAID = {2}), Database 'CalorieTrackerDB' shutdown.
+----------------------------------------------------------------
+Sat Mar 16 15:58:52 AEDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance 560740aa-0169-84d2-f41f-00006f68c86a 
+on database directory /private/var/folders/j3/_ydk09592wx6xtbtjjt4sxv04dbsp8/T/tmp.UxVUirAL/Documents/CalorieTrackerDB/.netbeans-derby/CalorieTrackerDB with class loader sun.misc.Launcher$AppClassLoader@6f94fa3e 
+Loaded from file:/Applications/NetBeans/glassfish-4.1/javadb/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_181-b13
+user.dir=/Applications/NetBeans/glassfish-4.1/javadb
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.14.3
+derby.system.home=/Users/kmen0004/Documents/CalorieTrackerDB/.netbeans-derby
+Database Class Loader started - derby.database.classpath=''
+
+------------  Begin Shutdown Error Stack -------------
+
+ERROR XSLA5: Cannot read log stream for some reason to rollback transaction {0}.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.FileLogger.undo(Unknown Source)
+	at org.apache.derby.impl.store.raw.xact.Xact.popSavePoints(Unknown Source)
+	at org.apache.derby.impl.store.raw.xact.Xact.rollbackToSavePoint(Unknown Source)
+	at org.apache.derby.impl.store.access.RAMTransaction.rollbackToSavePoint(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.internalRollbackToSavepoint(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericStatementContext.cleanupOnError(Unknown Source)
+	at org.apache.derby.iapi.services.context.ContextManager.cleanupOnError(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.cleanupOnError(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.ConnectionChild.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeLargeUpdate(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseEXCSQLIMM(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+Caused by: java.io.EOFException
+	at java.io.RandomAccessFile.readInt(RandomAccessFile.java:803)
+	at org.apache.derby.impl.store.raw.log.Scan.<init>(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.LogToFile.openBackwardsScan(Unknown Source)
+	... 17 more
+============= begin nested exception, level (1) ===========
+java.io.EOFException
+	at java.io.RandomAccessFile.readInt(RandomAccessFile.java:803)
+	at org.apache.derby.impl.store.raw.log.Scan.<init>(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.LogToFile.openBackwardsScan(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.FileLogger.undo(Unknown Source)
+	at org.apache.derby.impl.store.raw.xact.Xact.popSavePoints(Unknown Source)
+	at org.apache.derby.impl.store.raw.xact.Xact.rollbackToSavePoint(Unknown Source)
+	at org.apache.derby.impl.store.access.RAMTransaction.rollbackToSavePoint(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.internalRollbackToSavepoint(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericStatementContext.cleanupOnError(Unknown Source)
+	at org.apache.derby.iapi.services.context.ContextManager.cleanupOnError(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.cleanupOnError(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.ConnectionChild.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeLargeUpdate(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseEXCSQLIMM(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+============= end nested exception, level (1) ===========
+
+
+------------  End Shutdown Error Stack -------------
+
+New exception raised during cleanup Cannot read log stream for some reason to rollback transaction {0}.
+ERROR XSLA5: Cannot read log stream for some reason to rollback transaction {0}.
+	at org.apache.derby.iapi.error.StandardException.newException(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.FileLogger.undo(Unknown Source)
+	at org.apache.derby.impl.store.raw.xact.Xact.popSavePoints(Unknown Source)
+	at org.apache.derby.impl.store.raw.xact.Xact.rollbackToSavePoint(Unknown Source)
+	at org.apache.derby.impl.store.access.RAMTransaction.rollbackToSavePoint(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.internalRollbackToSavepoint(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericStatementContext.cleanupOnError(Unknown Source)
+	at org.apache.derby.iapi.services.context.ContextManager.cleanupOnError(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.cleanupOnError(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.ConnectionChild.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeLargeUpdate(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseEXCSQLIMM(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+Caused by: java.io.EOFException
+	at java.io.RandomAccessFile.readInt(RandomAccessFile.java:803)
+	at org.apache.derby.impl.store.raw.log.Scan.<init>(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.LogToFile.openBackwardsScan(Unknown Source)
+	... 17 more
+============= begin nested exception, level (1) ===========
+java.io.EOFException
+	at java.io.RandomAccessFile.readInt(RandomAccessFile.java:803)
+	at org.apache.derby.impl.store.raw.log.Scan.<init>(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.LogToFile.openBackwardsScan(Unknown Source)
+	at org.apache.derby.impl.store.raw.log.FileLogger.undo(Unknown Source)
+	at org.apache.derby.impl.store.raw.xact.Xact.popSavePoints(Unknown Source)
+	at org.apache.derby.impl.store.raw.xact.Xact.rollbackToSavePoint(Unknown Source)
+	at org.apache.derby.impl.store.access.RAMTransaction.rollbackToSavePoint(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericLanguageConnectionContext.internalRollbackToSavepoint(Unknown Source)
+	at org.apache.derby.impl.sql.conn.GenericStatementContext.cleanupOnError(Unknown Source)
+	at org.apache.derby.iapi.services.context.ContextManager.cleanupOnError(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.cleanupOnError(Unknown Source)
+	at org.apache.derby.impl.jdbc.TransactionResourceImpl.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.ConnectionChild.handleException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeStatement(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.execute(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedStatement.executeLargeUpdate(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.parseEXCSQLIMM(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.processCommands(Unknown Source)
+	at org.apache.derby.impl.drda.DRDAConnThread.run(Unknown Source)
+============= end nested exception, level (1) ===========
+----------------------------------------------------------------
+Sat Mar 16 16:45:37 AEDT 2019:
+Shutting down instance 560740aa-0169-84d2-f41f-00006f68c86a on database directory /private/var/folders/j3/_ydk09592wx6xtbtjjt4sxv04dbsp8/T/tmp.UxVUirAL/Documents/CalorieTrackerDB/.netbeans-derby/CalorieTrackerDB with class loader sun.misc.Launcher$AppClassLoader@6f94fa3e 
+(Skipping thread dump because of insufficient permissions:
+java.security.AccessControlException: access denied ("java.lang.RuntimePermission" "getStackTrace"))
+
+
+Cleanup action completed
+----------------------------------------------------------------
+Sat Mar 16 16:45:37 AEDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance 1d74c4de-0169-84d2-f41f-00006f68c86a 
+on database directory /private/var/folders/j3/_ydk09592wx6xtbtjjt4sxv04dbsp8/T/tmp.UxVUirAL/Documents/CalorieTrackerDB/.netbeans-derby/CalorieTrackerDB with class loader sun.misc.Launcher$AppClassLoader@6f94fa3e 
+Loaded from file:/Applications/NetBeans/glassfish-4.1/javadb/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_181-b13
+user.dir=/Applications/NetBeans/glassfish-4.1/javadb
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.14.3
+derby.system.home=/Users/kmen0004/Documents/CalorieTrackerDB/.netbeans-derby
+Database Class Loader started - derby.database.classpath=''
